@@ -1,4 +1,4 @@
-# 📝 To Do List com React + TailwindCSS
+# 📝 To Do List com React + TailwindCSS - PROJETO 7
 
 Este é o clássico **To Do List** desenvolvido em **React** e estilizado com **TailwindCSS**.  
 O projeto é ideal para praticar os conceitos fundamentais do React de forma prática e divertida.  
