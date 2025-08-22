@@ -1,8 +1,9 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f2f2f2;
+  background: #def2f1;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .app-container {
@@ -25,7 +26,7 @@ body {
   background: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Área de tarefas (coluna direita) */
@@ -34,7 +35,7 @@ body {
   background: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Filtros */
@@ -48,13 +49,13 @@ body {
 .filters button {
   padding: 8px;
   border: none;
-  background: #ddd;
+  background: #def2f1;
   cursor: pointer;
   border-radius: 4px;
 }
 
 .filters button.active {
-  background: #4a90e2;
+  background: #2b7a78;
   color: white;
   font-weight: bold;
 }
@@ -75,11 +76,21 @@ body {
 .task-input input {
   flex: 1;
   padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #17252a;
+}
+
+.task-input input:focus {
+  outline: none;
 }
 
 .task-input button {
   padding: 8px 12px;
   cursor: pointer;
+  background-color: #2b7a78;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
 }
 
 .task-list {
@@ -93,12 +104,23 @@ body {
   justify-content: space-between;
   margin-bottom: 8px;
   padding: 6px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #2b7a78;
 }
 
 .task-item.completed span {
   text-decoration: line-through;
   color: gray;
+}
+
+.task-item button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.task-item button:hover {
+  color: #2b7a78;
 }
 
 /* ===== Responsividade ===== */
