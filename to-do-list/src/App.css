@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== Main Content com duas colunas ===== */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column; /* Mobile padrão */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Sidebar (coluna esquerda) */
+.sidebar {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Área de tarefas (coluna direita) */
+.tasks-section {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Filtros */
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.filters button {
+  padding: 8px;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.filters button.active {
+  background: #4a90e2;
+  color: white;
+  font-weight: bold;
+}
+
+/* Contadores */
+.counters p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Lista de tarefas */
+.task-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.task-input input {
+  flex: 1;
+  padding: 8px;
+}
+
+.task-input button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding: 6px;
+  border-bottom: 1px solid #ddd;
+}
+
+.task-item.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* ===== Responsividade ===== */
+@media (min-width: 768px) {
+  .main-content {
+    flex-direction: row; /* Desktop em duas colunas */
+  }
+  .sidebar {
+    width: 30%;
+  }
+  .tasks-section {
+    width: 70%;
+  }
+}
