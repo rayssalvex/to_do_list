@@ -1,67 +1,81 @@
 # 📝 To Do List com React + TailwindCSS - PROJETO 7
 
-Este é o clássico **To Do List** desenvolvido em **React** e estilizado com **TailwindCSS**.  
-O projeto é ideal para praticar os conceitos fundamentais do React de forma prática e divertida.  
+Um **To Do List clássico** desenvolvido em **React.js**, com foco em **boas práticas de UI/UX** e funcionalidades essenciais para gerenciamento de tarefas.  
+Este projeto foi desenvolvido sem Tailwind (usando apenas CSS puro) para praticar conceitos fundamentais de **React, componentes, estado e responsividade**.
 
 ---
 
-## 📌 Conceito da Aplicação
-Um gerenciador de tarefas simples e funcional, com as seguintes funcionalidades:
+## 🚀 Funcionalidades
 
-1. **Adicionar tarefas** – Input para criar novas tarefas  
-2. **Listar tarefas** – Exibir todas as tarefas cadastradas  
-3. **Marcar como concluída** – Toggle do status da tarefa  
-4. **Remover tarefas** – Deletar tarefas desnecessárias  
-5. **Filtrar tarefas** – Ver todas, pendentes ou concluídas  
+- **Adicionar tarefas**
+  - Input controlado para nova tarefa
+  - Botão ou tecla **Enter** para adicionar
+  - Validação: não permite tarefas vazias
+  - Input é limpo após adicionar
 
----
+- **Listar tarefas**
+  - Exibição de todas as tarefas cadastradas
+  - Mostra título da tarefa
+  - Indica status (pendente ✅ ou concluída ✔)
+  - Lista vazia exibe mensagem amigável
 
-## ✅ Requisitos Funcionais
+- **Marcar como concluída**
+  - Checkbox para alternar entre **pendente** e **concluída**
+  - Feedback visual (texto riscado e cor diferente)
 
-### 01 - Adicionar Tarefas
-- Input controlado para nova tarefa  
-- Botão ou tecla Enter para submeter  
-- Validação: não permitir tarefas vazias  
-- Limpar input após adicionar  
+- **Remover tarefas**
+  - Botão ❌ em cada item para remover
+  - (Em breve: confirmação com SweetAlert2)
 
-### 02 - Exibir Lista de Tarefas
-- Renderizar array de tarefas  
-- Mostrar título da tarefa  
-- Indicar status (pendente/concluída)  
-- Lista vazia: exibir mensagem amigável  
+- **Filtros**
+  - Ver **todas, pendentes ou concluídas**
+  - Botão ativo fica destacado
 
-### 03 - Marcar como Concluída
-- Checkbox ou botão para toggle  
-- Atualizar estado da tarefa específica  
-- Feedback visual (texto riscado, cor diferente)  
+- **Contadores**
+  - Total de tarefas
+  - Quantas estão pendentes
+  - Quantas já foram concluídas
 
-### 04 - Remover Tarefas
-- Botão de delete para cada tarefa  
-- Confirmação antes de remover (opcional)  
-- Remover do estado/lista  
+- **Interface Responsiva**
+  - Design **mobile-first**
+  - Layout adaptativo
+  - Em telas grandes, interface em **duas colunas**:
+    - 📌 **Coluna esquerda** → Filtros e contadores  
+    - 📝 **Coluna direita** → Input + lista de tarefas  
 
-### 05 - Contador de Tarefas
-- Mostrar total de tarefas  
-- Mostrar quantas estão pendentes  
-- Mostrar quantas estão concluídas  
-
-### 06 - Interface Responsiva
-- Design mobile-first  
-- Layout adaptativo  
-- Experiência consistente em todos os dispositivos  
+- **Navbar e Footer**
+  - Navbar fixa no topo com título do app
+  - Footer no rodapé com créditos
 
 ---
 
-## 🚀 Tecnologias Utilizadas
-- [React](https://reactjs.org/)  
-- [TailwindCSS](https://tailwindcss.com/)  
-- [Vite](https://vitejs.dev/)  
+## 🖼️ Layout
+
+### 📱 Mobile
+- Navbar no topo
+- Filtros e contadores empilhados
+- Lista de tarefas abaixo
+
+### 🖥️ Desktop
+- Navbar no topo
+- **Duas colunas**:
+  - Esquerda → Filtros + contadores
+  - Direita → Input + lista
+- Footer fixado no final da página
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- [React.js](https://react.dev/)
+- [JavaScript ES6+](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [CSS Puro](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 
 ---
 
 ## 📂 Estrutura do Projeto
 ```bash
-todo-list/
+to-do-list/
  ├── src/
  │   ├── components/
  │   │   ├── TaskInput.jsx
@@ -72,3 +86,16 @@ todo-list/
  │   └── main.jsx
  ├── package.json
  └── tailwind.config.js
+
+
+---
+
+## ▶️ Como Rodar o Projeto
+
+### 1. Clonar repositório
+```bash
+git clone https://github.com/rayssalvex/to-do-list.git
+cd todo-list
+npm install
+npm run dev
+
