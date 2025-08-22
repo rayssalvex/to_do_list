@@ -1,4 +1,4 @@
-# 📝 To Do List com React + TailwindCSS - PROJETO 7
+# 📝 To Do List com React - PROJETO 7
 
 Um **To Do List clássico** desenvolvido em **React.js**, com foco em **boas práticas de UI/UX** e funcionalidades essenciais para gerenciamento de tarefas.  
 Este projeto foi desenvolvido sem Tailwind (usando apenas CSS puro) para praticar conceitos fundamentais de **React, componentes, estado e responsividade**.
