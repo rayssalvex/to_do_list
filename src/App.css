@@ -188,3 +188,34 @@ body {
 .app-container.dark .task-item button:hover {
   color: #3aafa9;
 }
+
+/* Estilos para o SweetAlert2 */
+
+/* TEMA CLARO */
+body {
+  --swal2-background: #ffffff;
+  --swal2-title-color: #17252a;
+  --swal2-html-container-color: #17252a;
+  --swal2-confirm-button-background-color: #387F7D;
+  --swal2-confirm-button-color: #ffffff;
+  --swal2-deny-button-background-color: #d33;
+  --swal2-cancel-button-background-color: #aaa;
+  --swal2-icon-color-success: #387F7D;
+  --swal2-icon-color-warning: #f8bb86;
+  --swal2-icon-color-error: #f27474;
+};
+
+
+/* TEMA ESCURO */
+.app-container.dark {
+  --swal2-background: #16213e;
+  --swal2-title-color: #e0e0e0;
+  --swal2-html-container-color: #e0e0e0;
+  --swal2-confirm-button-background-color: 387F7D;
+  --swal2-confirm-button-color: #16213e;
+  --swal2-deny-button-background-color: #d33;
+  --swal2-cancel-button-background-color: #387F7D;
+  --swal2-icon-color-success: #387F7D;
+  --swal2-icon-color-warning: #facea8;
+  --swal2-icon-color-error: #f27474;
+};

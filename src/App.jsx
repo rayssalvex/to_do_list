@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Swal from 'sweetalert2';
 import TaskInput from "./components/TaskInput";
 import TaskList from "./components/TaskList";
 import Navbar from "./components/Navbar";
@@ -28,6 +29,14 @@ export default function App() {
       completed: false,
     };
     setTasks([newTask, ...tasks]);
+
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Tarefa adicionada com sucesso!',
+      showConfirmButton: false,
+      timer: 1500
+    });
   };
 
   const toggleTask = (id) => {
@@ -103,4 +112,4 @@ export default function App() {
       <Footer />
     </div>
   );
-}
+};
