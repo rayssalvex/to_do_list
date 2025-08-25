@@ -7,12 +7,26 @@ import Footer from "./components/Footer";
 import "./App.css";
 
 export default function App() {
-  const [tasks, setTasks] = useState([]);
+  // Lógica para carregar as tarefas do localStorage
+  const getInitialTasks = () => {
+    const storedTasks = localStorage.getItem('tasks');
+    // Se houver tarefas salvas, retorna elas. Se não, retorna um array vazio.
+    return storedTasks ? JSON.parse(storedTasks) : [];
+  };
+
+  // Usando a função getInitialTasks para inicializar o estado das tarefas
+  const [tasks, setTasks] = useState(getInitialTasks);
   const [filter, setFilter] = useState("all");
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem('theme');
     return savedTheme ? savedTheme : 'light';
   });
+
+  // useEffect para salvar as tarefas no localStorage
+  // Este efeito é executado sempre que a variável 'tasks' muda
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks]);
 
   useEffect(() => {
     localStorage.setItem('theme', theme);
