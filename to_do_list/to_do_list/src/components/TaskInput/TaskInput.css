@@ -1,0 +1,60 @@
+.task-input input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc; /* borda visível */
+  border-radius: 8px;
+  outline: none; /* remove o outline padrão */
+  background-color: white; /* garante contraste */
+  color: #111; /* cor do texto */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-input input:focus {
+  border-color: #000000; /* borda destacada no foco */
+  box-shadow: 0 0 0 2px rgba(74, 97, 89, 0.2); /* sombra leve para destaque */
+}
+
+
+.task-input input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.task-input input:focus {
+  border-color: #ffffff;
+}
+
+.task-input button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #2b7a78;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.task-input button:hover {
+  background: #2b7a78;
+}
+
+/* Mobile responsivo */
+@media (max-width: px) {
+  .task-input {
+    border: #000000;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .task-input input,
+  .task-input button {
+    width: 100%;
+  }
+}

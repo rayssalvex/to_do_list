@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import "./TaskInput.css";
 
 export default function TaskInput({ addTask }) {
   const [value, setValue] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!value.trim()) return; // não permitir vazio
+    if (!value.trim()) return;
     addTask(value);
     setValue("");
   };

@@ -1,4 +1,5 @@
 import React from "react";
+import './TaskItem.css';
 
 export default function TaskItem({ task, toggleTask, deleteTask }) {
   return (
@@ -7,9 +8,12 @@ export default function TaskItem({ task, toggleTask, deleteTask }) {
         type="checkbox"
         checked={task.completed}
         onChange={() => toggleTask(task.id)}
+        title="Concluído"
       />
       <span>{task.title}</span>
-      <button onClick={() => deleteTask(task.id)}>❌</button>
+      <button title="Apagar" onClick={() => deleteTask(task.id)}>
+        ❌
+      </button>
     </li>
   );
 }

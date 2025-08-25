@@ -1,0 +1,190 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #def2f1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== Main Content com duas colunas ===== */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Sidebar (coluna esquerda) */
+.sidebar {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+/* Área de tarefas (coluna direita) */
+.tasks-section {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+/* Filtros */
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.filters button {
+  padding: 8px;
+  border: none;
+  background: #def2f1;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.filters button.active {
+  background: #2b7a78;
+  color: white;
+  font-weight: bold;
+}
+
+/* Contadores */
+.counters p {
+  margin: 5px 0;
+  font-size: 17px;
+}
+
+/* Lista de tarefas */
+.task-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.task-input input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #17252a;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.task-input input:focus {
+  outline: none;
+}
+
+.task-input button {
+  padding: 8px 12px;
+  cursor: pointer;
+  background-color: #2b7a78;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  padding: 6px;
+  border-bottom: 1px solid #2b7a78;
+  transition: border-color 0.3s;
+}
+
+.task-item.completed span {
+  text-decoration: line-through;
+  color: gray;
+  transition: color 0.3s;
+}
+
+.task-item button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.task-item button:hover {
+  color: #2b7a78;
+}
+
+/* ===== Responsividade ===== */
+@media (min-width: 768px) {
+  .main-content {
+    flex-direction: row;
+  }
+  .sidebar {
+    width: 30%;
+  }
+  .tasks-section {
+    width: 70%;
+  }
+}
+
+/* ===== Dark Mode ===== */
+.app-container.dark {
+  background-color: #1a1a2e;
+  color: #e0e0e0;
+}
+
+.app-container.dark .sidebar,
+.app-container.dark .tasks-section {
+  background: #16213e;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.app-container.dark .filters button {
+  background: #2c3e50;
+  color: #e0e0e0;
+}
+
+.app-container.dark .filters button.active {
+  background: #3aafa9;
+  color: #16213e;
+}
+
+.app-container.dark .task-input input {
+  background: #2c3e50;
+  border: 1px solid #7f8c8d;
+  color: #e0e0e0;
+}
+
+.app-container.dark .task-input button {
+  background-color: #3aafa9;
+  color: #16213e;
+}
+
+.app-container.dark .task-item {
+  border-bottom: 1px solid #2c3e50;
+}
+
+.app-container.dark .task-item.completed span {
+  color: #7f8c8d;
+}
+
+.app-container.dark .task-item button:hover {
+  color: #3aafa9;
+}

@@ -1,0 +1,10 @@
+.task-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #10b981; /* cor verde quando marcado */
+  cursor: pointer;
+}
+
+.task-item input[type="checkbox"]:checked {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}

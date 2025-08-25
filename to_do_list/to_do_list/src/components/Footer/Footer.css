@@ -1,0 +1,29 @@
+.footer {
+  background: white;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  text-align: center;
+  margin-top: auto;
+    display: flex;
+  align-items: center;
+  gap: 8px; /* espaço entre o ícone e o texto */
+  justify-content: center; /* centraliza no footer */
+  flex-wrap: wrap; /* em telas pequenas quebra linha */
+}
+
+.footer-github img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain; /* mantém proporção */
+  transition: transform 0.2s ease;
+}
+
+.footer-github img:hover {
+  transform: scale(1.1); /* efeito ao passar o mouse */
+}
+
+/* Dark Mode */
+.app-container.dark .footer {
+  background: #6ea8a5;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+}
